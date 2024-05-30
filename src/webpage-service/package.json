@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "express": "4.19.2"
+  },
+  "name": "webpage-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

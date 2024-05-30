@@ -1,19 +1,15 @@
 version: '3'
 
 services:
-  product-service:
-    build: ./product-service
-    volumes:
-      - ./product-service:/usr/src/app
-    ports:
-      - 4001:80
 
-  website-service:
-    image: php:apache
-    volumes: 
-      - ./website-service:/var/www/html
+  webpage-service:
+    build: ./webpage-service
     ports:
-      - 4000:80
+      - 8080:80
     depends_on:
-      - product-service
-    
+      - chat-api
+
+  chat-api:
+    build: ./chat-service/api
+    volumes:
+      - ./chat-service/api:/usr/src/app
